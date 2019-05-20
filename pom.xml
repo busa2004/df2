@@ -6,7 +6,7 @@
 	<groupId>com.douzone</groupId>
 	<artifactId>df</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>df</name>
 	<description>Polling App built with Spring Boot, Spring Security, MySQL and JWT</description>
@@ -124,12 +124,7 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<warSourceDirectory>src/main/webapp</warSourceDirectory>
-				</configuration>
-			</plugin>
+		
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
