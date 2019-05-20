@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.douzone.df.model.Eval;
 import com.douzone.df.model.EvalItem;
 import com.douzone.df.model.EvalItemScore;
+import com.douzone.df.payload.EvalScoreRequest;
 import com.douzone.df.payload.EvalVersionRequest;
 import com.douzone.df.service.EvalService;
 
@@ -70,6 +71,10 @@ public class EvalController {
 		boolean result = service.createEvalItemScore(evalItemScore);
 		
 		return result; // 정상실행 : true / 실패 : false
+	}
+	@PostMapping("/setScore")
+	public void setScore(@RequestBody EvalScoreRequest request) {
+		System.out.println(request);
 	}
 
 	// READ
