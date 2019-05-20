@@ -148,7 +148,7 @@
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
 					<url>http://218.39.221.101:8080/manager/text</url>
-					<path>/</path>
+					<path>/df</path>
 					<username>admin</username>
 					<password>manager</password>
 				</configuration>
