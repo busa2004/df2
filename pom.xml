@@ -86,6 +86,12 @@
 							<exclude>**/*.java</exclude>
 						</excludes>
 					</resource>
+					<resource>
+						<directory>${project.basedir}/src/production/resources</directory>
+						<excludes>
+							<exclude>**/*.java</exclude>
+						</excludes>
+					</resource>
 				</resources>
 				<plugins>
 					<plugin>
@@ -98,7 +104,7 @@
 				</plugins>
 			</build>
 			<dependencies>
-				
+				<!-- Servlet -->
 				<dependency>
 					<groupId>javax.servlet</groupId>
 					<artifactId>javax.servlet-api</artifactId>
@@ -118,6 +124,14 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
